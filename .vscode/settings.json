@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "editor.fontFamily": "'FiraCode Nerd Font', 'monospace', monospace"
+}

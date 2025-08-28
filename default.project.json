@@ -1,0 +1,31 @@
+{
+  "name": "rblx-voice-cmds",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedFirst": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ReplicatedFirst"
+    },
+
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ReplicatedStorage",
+      "Packages": {
+        "$path": {
+          "optional": "Packages"
+        }
+      }
+    },
+
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/ServerScriptService",
+      "ServerPackages": {
+        "$path": {
+          "optional": "ServerPackages"
+        }
+      }
+    }
+  }
+}

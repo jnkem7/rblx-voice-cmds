@@ -1,0 +1,12 @@
+[package]
+name = "jnkem/emberfalle"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "sleitnick/signal@2.0.3"
+TableUtils = "sleitnick/table-util@1.2.1"
+
+[server-dependencies]
+ProfileStore = "lm-loleris/profilestore@1.0.3"

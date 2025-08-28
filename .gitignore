@@ -1,0 +1,12 @@
+# Project place file
+/Cozy-Catch.rbxlx
+/sourcemap.json
+
+# Wally
+/ServerPackages
+/Packages
+/wally.lock
+
+# Roblox studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
