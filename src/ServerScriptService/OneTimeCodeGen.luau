@@ -4,6 +4,12 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Network = require(ReplicatedStorage.Network)
 
-Network.onServerInvoke(Network.RemoteFunctions.GenerateOTC, function(player: Player)
-	return player.UserId
-end)
+local OneTimeCodeGen = {}
+
+function OneTimeCodeGen.startServer()
+	Network.onServerInvoke(Network.RemoteFunctions.GenerateOTC, function(player: Player)
+		return player.UserId
+	end)
+end
+
+return OneTimeCodeGen
