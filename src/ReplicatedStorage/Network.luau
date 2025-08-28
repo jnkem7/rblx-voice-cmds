@@ -4,21 +4,8 @@
     Centralized remote event/function wrapper for server/client communication.
 ]]
 
-type RemoteEventNames =
-	"CreateReplicationFocus"
-	| "ProfileUpdated"
-	| "StartFishing"
-	| "StopFishing"
-	| "SendNotification"
-	| "SellFish"
-	| "AddPondFish"
-	| "RemovePondFish"
-	| "PurchaseRod"
-	| "PurchaseBait"
-	| "ExpandPlot"
-	| "SelectBait"
-	| "LoadCharacter"
-type RemoteFunctionNames = "FetchAllProfiles"
+type RemoteEventNames = "LoadCharacter"
+type RemoteFunctionNames = "GenerateOTC"
 type UnreliableRemoteEventNames = "UnreliableRemoteEvent"
 
 type RemoteEvents = {
@@ -36,23 +23,11 @@ local remoteFunctions: RemoteFunctions = {}
 local unreliableRemoteEvents: UnreliableRemoteEvents = {}
 
 local REMOTE_EVENT_NAMES: { RemoteEventNames } = {
-	"CreateReplicationFocus",
-	"ProfileUpdated",
-	"StartFishing",
-	"StopFishing",
-	"SendNotification",
-	"SellFish",
-	"AddPondFish",
-	"RemovePondFish",
-	"PurchaseRod",
-	"PurchaseBait",
-	"ExpandPlot",
-	"SelectBait",
 	"LoadCharacter",
 }
 
 local REMOTE_FUNCTION_NAMES: { RemoteFunctionNames } = {
-	"FetchAllProfiles",
+	"GenerateOTC",
 }
 local UNRELIABLE_REMOTE_EVENT_NAMES: { UnreliableRemoteEventNames } = {
 	"UnreliableRemoteEvent",
@@ -62,22 +37,10 @@ local Network = {}
 
 -- Remote enums for autocompletion
 Network.RemoteEvents = {
-	CreateReplicationFocus = "CreateReplicationFocus" :: "CreateReplicationFocus",
-	ProfileUpdated = "ProfileUpdated" :: "ProfileUpdated",
-	StartFishing = "StartFishing" :: "StartFishing",
-	StopFishing = "StopFishing" :: "StopFishing",
-	SendNotification = "SendNotification" :: "SendNotification",
-	SellFish = "SellFish" :: "SellFish",
-	AddPondFish = "AddPondFish" :: "AddPondFish",
-	RemovePondFish = "RemovePondFish" :: "RemovePondFish",
-	PurchaseRod = "PurchaseRod" :: "PurchaseRod",
-	ExpandPlot = "ExpandPlot" :: "ExpandPlot",
-	PurchaseBait = "PurchaseBait" :: "PurchaseBait",
-	SelectBait = "SelectBait" :: "SelectBait",
 	LoadCharacter = "LoadCharacter" :: "LoadCharacter",
 }
 Network.RemoteFunctions = {
-	FetchAllProfiles = "FetchAllProfiles" :: "FetchAllProfiles",
+	GenerateOTC = "GenerateOTC" :: "GenerateOTC",
 }
 Network.UnreliableRemoteEvents = {
 	UnreliableRemoteEvent = "UnreliableRemoteEvent" :: "UnreliableRemoteEvent",

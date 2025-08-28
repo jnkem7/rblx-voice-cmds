@@ -14,6 +14,7 @@ local function preGameLoadTasks()
 end
 
 local function postGameLoadTasks()
+	local Players = game:GetService("Players")
 	local Workspace = game:GetService("Workspace")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -37,6 +38,11 @@ local function postGameLoadTasks()
 
 	-- Close the loading screen
 	LoadingScreenManager.cleanup()
+
+	-- Insert guis
+	for _, gui in ipairs(ReplicatedStorage.StarterGui:GetChildren()) do
+		gui.Parent = Players.LocalPlayer.PlayerGui
+	end
 end
 
 preGameLoadTasks()
