@@ -1,11 +1,13 @@
 --!strict
 
 local GuiManager = {}
-
 GuiManager.gui = {}
-GuiManager.gui.OTC = require(script.OTC)
 
 function GuiManager.startClient()
+	-- require modules
+	GuiManager.gui.OTC = require(script.OTC)
+
+	-- start modules
 	for _, guiModule in pairs(GuiManager.gui) do
 		guiModule.startClient()
 	end

@@ -23,7 +23,7 @@ local function postGameLoadTasks()
 		Workspace:GetAttributeChangedSignal("ServerLoaded"):Wait()
 	end
 
-	--local GuiManager = require(ReplicatedStorage.GuiManager)
+	local GuiManager = require(ReplicatedStorage.GuiManager)
 	local Network = require(ReplicatedStorage.Network)
 	local ReplicationFocus = require(ReplicatedStorage.ReplicationFocus)
 
@@ -45,15 +45,16 @@ local function postGameLoadTasks()
 	for _, gui in ipairs(ReplicatedStorage.StarterGui:GetChildren()) do
 		gui.Parent = Players.LocalPlayer.PlayerGui
 	end
+
 	for _, gui in ipairs(StarterGui:GetChildren()) do
 		gui.Parent = Players.LocalPlayer.PlayerGui
 	end
 
 	task.wait(1)
 
-	--GuiManager.startClient()
+	GuiManager.startClient()
 
-	--GuiManager.gui.OTC.setVisible(true)
+	GuiManager.gui.OTC.setVisible(true)
 end
 
 preGameLoadTasks()
